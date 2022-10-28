@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* classe general */
+/* flexbox */
+.dpf{
+    display: flex;
+}
+.jc{
+    justify-content: center;
+}
+.jsb{
+    justify-content: space-between;
+}
+.jfe{
+    justify-content: flex-end;
+}
+.aic{
+    align-items: center;
+}
+
+/* Background */
+.bg-R{
+    background-color: #e74c3c;
+}
+
+.bg-GB{
+    background-color: #2c3e50;
+    
+}
+
+/* font */
+.F-color-W{
+    color: white;
+}
+
+/* padding */
+.pad-G-05em{
+    padding: 0.5em;
+}
+.pad-L-2em{
+    padding-left: 2em;
+}
+.pad-R-2em{
+    padding-right: 2em;
+}
+
+
+
+/* header */
+
+/* main */
+.conteneur{
+    height: 100vh;
+}
