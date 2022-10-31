@@ -30,11 +30,16 @@
     <div class="form pad-T-5-5em dpf"> 
         <div class="">
             <h2>Créer un article</h2>
-            <form action="/" method="post">
+            <form action="/formulaire-article.php" method="post">
                 <div>
-                    <label for="titre">Titre</label>
-                    <input type="text" name="titre" id="titre">
+                    <label for="titre_Article">Titre</label>
+                    <input type="text" name="titre_Article" id="titre_Article">
                 </div>
+                <div class="errors dpf-jc">
+                <?php
+                echo $errors['article'];
+                ?>
+            </div>
                 <div>
                     <label for="image">Image</label>
                     <input type="text" name="image" id="image">
@@ -48,9 +53,10 @@
                     </select>
                 </div>
                 <div>
-                    <label for="contenue">Contenue</label>
-                    <input type="text" name="contenue" id="contenue">
+                    <label for="description">Contenue</label>
+                    <input type="text" name="description" id="description">
                 </div>
+                <button type="submit">Valider</button>
             </form>
         </div>
         
