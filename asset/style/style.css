@@ -17,8 +17,18 @@
 .jfe{
     justify-content: flex-end;
 }
+.fdr{
+    flex-direction: row;
+}
+.fdcr{
+    flex-direction: column-reverse;
+}
+
 .aic{
     align-items: center;
+}
+.rw{
+    flex-flow: row wrap;
 }
 
 /* Background */
@@ -46,12 +56,63 @@
 .pad-R-2em{
     padding-right: 2em;
 }
+.pad-B-1em{
+    padding-bottom: 1em;
+}
+.pad-T-5-5em{
+    padding-top: 5.5em;
+}
 
 
+/* margin */
+.mar-L-2em{
+    margin-left: 2em;
+}
+.mar-B-1em{
+    margin-bottom: 1em;
+}
+
+/* fixed */
+.fixed{
+    position: fixed;
+}
+
+/* body */
+body{
+    position: absolute;
+}
 
 /* header */
+header{
+    width: 100%;
+}
 
 /* main */
 .conteneur{
     height: 100vh;
+
+}
+
+.tuile{
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 400px;
+}
+
+
+/* formulaire */
+.form{
+    margin: 250%;
+    
+    /* border: #2c3e50 solid 3px; */
+
+}
+
+
+/* footer */
+footer{
+    position: relative;
+    width: 100%;
+    top: 92%;
 }

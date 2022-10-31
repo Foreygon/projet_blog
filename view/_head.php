@@ -8,6 +8,8 @@
     <title>Projet Blog</title>
 
     <!-- link css -->
-    <link rel="stylesheet" href="./asset/style/style.css">
+    <?php
+        require_once '__link.php'
+    ?>
 
 </head>
