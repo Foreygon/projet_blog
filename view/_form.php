@@ -11,14 +11,48 @@
     ];
 
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $article = filter_var($_POST['article'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-        $blog = $pdo->prepare("INSERT INTO article VALUES (DEFAULT, :categorie, :titre_Article, :image, :description");
+        
+        $titre = filter_var($_POST['titre_Article'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $categorie = filter_var($_POST['categorie'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $image = filter_var($_POST['image'], FILTER_VALIDATE_URL);
+        $description = filter_var($_POST['description'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-        if(!$article){
-            $errors['article'] = '<p class="color_red"><strong>Votre saisie contient aucun caractere</strong></p>';
-        }elseif(strlen($article) <= 5){
-            $errors['article'] = '<p class="color_red"><strong>Votre saisie est trop courte</strong></p>';
+
+        $tuileStmt = $pdo->prepare("INSERT INTO article VALUES (DEFAULT, :categorie, :titre_Article, :image, :description");
+        
+
+        // titre
+        if(!$titre){
+            $errors['titre_article'] = '<p class="color_red"><strong>Votre saisie contient aucun caractere</strong></p>';
+            
+        }elseif(strlen($titre) <= 5){
+            $errors['titre_Article'] = '<p class="color_red"><strong>Votre saisie est trop courte</strong></p>';
         }
+
+        // Categorie
+        if(!$categorie){
+            $errors['categorie'] = '<p class="color_red"><strong>Votre saisie contient aucun caractere</strong></p>';
+            
+        }elseif(strlen($categorie) <= 5){
+            $errors['categorie'] = '<p class="color_red"><strong>Votre saisie est trop courte</strong></p>';
+        }
+
+        // image
+        if(!$image){
+            $errors['image'] = '<p class="color_red"><strong>Votre saisie contient aucun caractere</strong></p>';
+            
+        }elseif(strlen($image) <= 5){
+            $errors['image'] = '<p class="color_red"><strong>Votre saisie est trop courte</strong></p>';
+        }
+
+        // description
+        if(!$description){
+            $errors['description'] = '<p class="color_red"><strong>Votre saisie contient aucun caractere</strong></p>';
+            
+        }elseif(strlen($description) <= 5){
+            $errors['description'] = '<p class="color_red"><strong>Votre saisie est trop courte</strong></p>';
+        }
+        
     }
 
 ?>
@@ -47,9 +81,9 @@
                 <div>
                     <label for="categorie">Categorie</label>
                     <select name="categorie" id="categorie">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                         <option value="3">3</option>
+                        <option value="1">Animeaux</option>
+                        <option value="2">BTP</option>
+                         <option value="3">Jeux de cartes</option>
                     </select>
                 </div>
                 <div>

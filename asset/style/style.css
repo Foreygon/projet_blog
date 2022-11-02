@@ -45,7 +45,9 @@
 .F-color-W{
     color: white;
 }
-
+.color_red{
+    color: #ff1900;
+}
 /* padding */
 .pad-G-05em{
     padding: 0.5em;
@@ -102,12 +104,6 @@ header{
 
 
 /* formulaire */
-.form{
-    margin: 250%;
-    
-    /* border: #2c3e50 solid 3px; */
-
-}
 
 
 /* footer */

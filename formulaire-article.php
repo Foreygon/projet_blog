@@ -6,7 +6,7 @@
 <body>
     <!-- start header -->
     <?php
-    require_once "./view/_header.php";
+    // require_once "./view/_header.php";
     ?>
     <!-- end header -->
 
